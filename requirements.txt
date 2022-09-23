@@ -1,0 +1,7 @@
+fastapi>=0.85.0
+numpy>=1.23.3
+onnxruntime>=1.12.1
+onnxruntime_gpu>=1.12.1
+opencv_python>=4.6.0.66
+Pillow>=9.2.0
+uvicorn>=0.18.2
