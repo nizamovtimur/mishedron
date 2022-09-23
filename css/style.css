@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+div.app{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div.app > h1{
+    position: absolute;
+    font-size: 70px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.app > h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #6c757d; 
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #6c757d;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+}
+.btn:focus {
+	box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
+}
+.btn:hover {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+.btn:active {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.btn2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #6c757d; 
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #6c757d;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+}
+.btn2:focus {
+	box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
+}
+.btn2:hover {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+.btn2:active {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.btn-back {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid #6c757d; 
+	border-radius: 5px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #6c757d;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+}
+.btn-back:focus {
+	box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
+}
+.btn-back:hover {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+.btn-back:active {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.icon-excel {
+	background-image: url("./photo/back.png");
+	padding-left : 32px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	background-repeat : no-repeat;
+}
