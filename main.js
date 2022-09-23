@@ -9,8 +9,8 @@ function createWindow() {
             nodeIntegration: true
         }
     })
-
-    win.loadFile('index0.html');
+    // win.removeMenu();
+    win.loadFile('loader.html');
     //win.webContents.openDevTools();
 }
 
