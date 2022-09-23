@@ -2,30 +2,20 @@
 <html>
 <head>
     <link rel="stylesheet" href="./style.css">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
 </head>
-<body onload="myFunction()" style="margin:0;">
-
-<div id="loader"></div>
+<body>
 
 <div style="display:none;" id="myDiv" class="animate-bottom">
   <h2>Tada!</h2>
 </div>
-
-<script>
-var myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 1500);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
-
+<script src="./renderer.js"></script>
 </body>
 </html>
-
-
-
