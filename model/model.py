@@ -1,6 +1,7 @@
 import base64
-import glob
+from glob import glob
 from io import BytesIO
+import os.path
 
 import cv2
 import random
@@ -59,8 +60,10 @@ app = FastAPI(title="AI Model")
 @app.post("/detection", response_description="Bear detection")
 async def detection(input_source: str):
     try:
+        input_source = input_source if os.path.isdir(input_source) else os.path.dirname(input_source)
         predict_photos = []
-        for file_name in glob.glob(input_source + "/*.[jpg|JPG|jpeg|JPEG|png|PNG]"):
+        files = glob(os.path.join(input_source, '*.jpg')) + glob(os.path.join(input_source, '*.jpeg')) + glob(os.path.join(input_source, '*.png')) + glob(os.path.join(input_source, '*.JPG')) + glob(os.path.join(input_source, '*.JPEG')) + glob(os.path.join(input_source, '*.PNG'))
+        for file_name in files:
             img = cv2.imread(file_name)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             image = img.copy()
@@ -97,6 +100,8 @@ async def detection(input_source: str):
             predict_photos.append(get_base64(Image.fromarray(ori_images[0])))
 
         result_of_classification = {"predict_photos": predict_photos}
+        if len(result_of_classification) == 0:
+            raise Exception("Фотографий не найдено!")
     except Exception as e:
         raise HTTPException(404, str(e))
     return result_of_classification
