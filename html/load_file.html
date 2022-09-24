@@ -5,15 +5,20 @@
 </head>
 <body>
 <a href = "index.html" title = "Назад"><img src="../photo/back.png" width = 60 height = 60 style="margin-left: 15px; margin-top: 5px"></a>
-<h1><font size = 70px>Load file</h1>
+<h1>Load file</h1>
     <div class ="app">
-        <label for="ctrl">Выберите папку:</label>
+        <label for="ctrl">Выберите папку:  </label>
         <input type="file" id="ctrl" webkitdirectory directory multiple/>
-        <br>
-        <button id="submit" name="submit_button" >Запуск анализа</button>
-        <br>
-        <div id="result">результат</div>
     </div>
+<br>
+    <div class = "app1">
+        <button id="submit" name="submit_button" class = "btn-load">Запуск анализа</button>
+        <br>
+    </div>
+<br>
+<div class = "app2">
+    <div id="result" style="padding-left: 15%">результат</div>
+</div>
 <script src="../js/load_images.js"></script>
 </body>
 </html>

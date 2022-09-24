@@ -21,39 +21,38 @@ div.app{
 
 div.app > h2{
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     font-size: 70px;
     transform: translate(-50%, -50%);
 }
 
-.div.app.app1{
-    align-items: center;
+div.app1{
+    display: flex;
     justify-content: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
+h1{
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+}
+
+div.app2{
+    left: 20%
+}
 .btn-load {
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    padding: 7px 7px;
+    font-size: 16px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #2286aa;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
 }
 
-.btn-load:hover {background-color: #3e8e41}
-
-.btn-load:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
+.btn-load:hover {background-color: #196480}
