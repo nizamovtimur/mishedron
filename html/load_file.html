@@ -4,20 +4,25 @@
 <link rel="stylesheet" href="../css/style_load.css">
 </head>
 <body>
-<a href = "index.html" title = "Назад"><img src="../photo/back1.png" width = 20 height = 20 style="margin-left: 1%; margin-top: 1%"></a>
-<h1>Загрузите папку</h1>
-    <div class ="app">
-        <label for="ctrl">Выберите папку:  </label>
-        <input type="file" id="ctrl" webkitdirectory directory multiple/>
+<div id="left">
+    <a href = "index.html" title = "Назад"><img src="../photo/back1.png" width = 20 height = 20 style="margin-left: 1%; margin-top: 1%"></a>
+    <h1>Загрузите папку</h1>
+        <div class ="app">
+            <label for="ctrl">Выберите папку:  </label>
+            <input type="file" id="ctrl" webkitdirectory directory multiple/>
+        </div>
+    <br>
+        <div class = "app1">
+            <button id="submit" name="submit_button" class = "btn-load">Запуск анализа</button>
+            <br>
+        </div>
+    <br>
+    <div class = "app2">
+        <div id="result" style="padding-left: 15%">результат</div>
     </div>
-<br>
-    <div class = "app1">
-        <button id="submit" name="submit_button" class = "btn-load">Запуск анализа</button>
-        <br>
-    </div>
-<br>
-<div class = "app2">
-    <div id="result" style="padding-left: 15%">результат</div>
+</div>
+<div id="right">
+
 </div>
 <script src="../js/load_images.js"></script>
 </body>
