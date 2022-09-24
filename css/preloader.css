@@ -1,0 +1,39 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #add7f6;
+  z-index: 2;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+}
+.preloader .loader {
+  width: 75px;
+  height: 75px;
+  border: 10px solid white;
+  border-radius: 50%;
+  border-top-color: #2667FF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: 1s spin infinite linear;
+}
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=preloader.css.map */
