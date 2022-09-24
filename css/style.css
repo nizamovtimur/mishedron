@@ -34,6 +34,16 @@ div.app > h2{
     transform: translate(-50%, -50%);
 }
 
+h3{
+	width: 90%;
+	height: 67%;
+	position: relative;
+	text-align: center;
+	font-size: 15px;
+	top: 20%;
+	left: 5%;
+	right: 25%
+}
 .btn {
 	position: absolute;
 	width: 15%;
