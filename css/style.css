@@ -37,13 +37,15 @@ div.app > h2{
 
 h3{
 	width: 90%;
-	height: 67%;
+	height: 30%;
 	position: relative;
 	text-align: center;
 	font-size: 15px;
 	top: 20%;
 	left: 5%;
-	right: 25%
+	right: 25%;
+	color: #000000;
+	background: #ffffff
 }
 .btn {
 	position: absolute;
