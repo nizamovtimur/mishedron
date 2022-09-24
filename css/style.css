@@ -10,6 +10,7 @@ html, body{
     height: 100%;
 	background: url("../photo/edited.jpg");
 	background-size:cover;
+	background-attachment: fixed;
 	color: #ffffff
 }
 
@@ -35,16 +36,6 @@ div.app > h2{
     transform: translate(-50%, -50%);
 }
 
-h3{
-	width: 90%;
-	height: 67%;
-	position: relative;
-	text-align: center;
-	font-size: 15px;
-	top: 20%;
-	left: 5%;
-	right: 25%
-}
 .btn {
 	position: absolute;
 	width: 15%;
@@ -116,3 +107,14 @@ h3{
 .btn2:hover {background-color: #196480}
 
 
+div .about_text {
+	position: relative;
+	background-color: #ffffff;
+	color: #000000;
+	margin: 120px auto;
+	padding: 20px 10px 20px;
+	width: 80%;
+}
+div .about_text p {
+	margin: 20px 0;
+}

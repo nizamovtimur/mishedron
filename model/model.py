@@ -83,6 +83,7 @@ async def detection(input_source: str):
             ori_images = [img.copy()]
             predict_points = []
             for i, (batch_id,x0,y0,x1,y1,cls_id,score) in enumerate(outputs):
+                if cls_id != 0: continue
                 image = ori_images[int(batch_id)]
                 box = np.array([x0,y0,x1,y1])
                 box -= np.array(dwdh*2)

@@ -68,6 +68,7 @@
     "semver": "^6.3.0",
     "semver-compare": "^1.0.0",
     "serialize-error": "^7.0.1",
+    "shell": "^0.9.4",
     "sprintf-js": "^1.1.2",
     "sumchecker": "^3.0.1",
     "to-readable-stream": "^1.0.0",
