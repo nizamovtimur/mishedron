@@ -4,22 +4,13 @@ let result = document.getElementById('result');
 let tabs = document.getElementById('list-tab');
 let value_tabs = document.getElementById('nav-tabContent');
 let listGroup = document.getElementById('listGroup');
+let pictureBox = document.getElementById('pictureBox');
 
 const $ = require('../jquery/jquery-3.6.1.js');
-// const triggerTabList = document.querySelectorAll('#myTab a');
-//
-// triggerTabList.forEach(triggerEl => {
-//     const tabTrigger = new bootstrap.Tab(triggerEl)
-//
-//     triggerEl.addEventListener('click', event => {
-//         event.preventDefault()
-//         tabTrigger.show()
-//     })
-// })
-
-listGroup.addEventListener("click", function (){
-    console.log("skdhvjsd");
-
+$(function(){
+    $('#list-tab').on('click','a',function(){
+        pictureBox.src = document.getElementById("id" + ($(this).index() + 1)).path;
+    });
 });
 
 submit.addEventListener("click", function (){
@@ -32,7 +23,6 @@ submit.addEventListener("click", function (){
         tabs.innerHTML = '';
         result.innerText = JSON.stringify(predict_result);
         let true_map = predict_result["predict_result"];
-        // result.innerText = true_map;
         let count = 0;
         for (var abs_path in true_map){
             count++;
@@ -42,6 +32,7 @@ submit.addEventListener("click", function (){
             link.setAttribute("href", "#list" + count);
             link.setAttribute("data-bs-toggle", "list");
             link.setAttribute("role", "tab");
+            link.path = abs_path;
             link.appendChild(document.createTextNode(abs_path.substring(abs_path.lastIndexOf('\\') + 1)));
             tabs.appendChild(link);
             let custom_div = document.createElement("div");
@@ -52,14 +43,10 @@ submit.addEventListener("click", function (){
                 custom_div.innerText += true_map[abs_path][i].toString() + " ";
             }
             value_tabs.appendChild(custom_div);
-            let image = document.createElement("img");
-            image.setAttribute("src", abs_path);
-            value_tabs.appendChild(image);
         }
     }).catch(e=>{
         console.log(e);
     });
 
     // TODO: DIMA, EGOR, TYPE YOR CODE HERE
-    // result.innerText = result_predict;
 });
