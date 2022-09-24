@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui
+    font-family: system-ui;
 }
 
 html, body{
@@ -33,6 +33,11 @@ h1{
     position: relative;
     text-align: center;
     font-size: 50px;
+}
+
+#ctrl{
+    position: relative;
+    text-align: center;
 }
 
 div.app2{

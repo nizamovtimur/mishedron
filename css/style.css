@@ -23,9 +23,8 @@ div.app{
 div.app > h1{
     position: absolute;
     font-size: 50px;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 18%;
+	left: 29%;
 }
 
 div.app > h2{
@@ -106,7 +105,7 @@ div.app > h2{
 
 div .about_text {
 	position: relative;
-	background: #bfdde7;
+	background: #ffffff;
 	color: #000000;
 	margin: 120px auto;
 	padding: 20px 10px 20px;
@@ -116,9 +115,3 @@ div .about_text p {
 	margin: 10px 0;
 }
 
-hr {
-	border: none;
-	background-color: #ffffff;
-	color: #ffffff;
-	height: 1.5px;
-}
