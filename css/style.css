@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	background: #add7f6;
 }
 
 html, body{
@@ -25,8 +26,9 @@ div.app > h1{
 
 div.app > h2{
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 50%;
+	font-size: 70px;
     transform: translate(-50%, -50%);
 }
 
@@ -144,10 +146,3 @@ div.app > h2{
 	border-color: #6c757d;
 }
 
-.icon-excel {
-	background-image: url("./photo/back.png");
-	padding-left : 32px;
-	padding-top : 10px;
-	padding-bottom : 10px;
-	background-repeat : no-repeat;
-}
