@@ -1,4 +1,5 @@
 import base64
+import glob
 from io import BytesIO
 
 import cv2
@@ -55,12 +56,12 @@ colors = {name:[random.randint(0, 255) for _ in range(3)] for i,name in enumerat
 app = FastAPI(title="AI Model")
 
 
-@app.post("/classification", response_description="Images classifier")
-async def classification(files: list):
+@app.post("/detection", response_description="Bear detection")
+async def detection(input_source: str):
     try:
         predict_photos = []
-        for file in files:
-            img = cv2.imread(file)
+        for file_name in glob.glob(input_source + "/*.[jpg|JPG|jpeg|JPEG|png|PNG]"):
+            img = cv2.imread(file_name)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
             image = img.copy()
             image, ratio, dwdh = letterbox(image, auto=False)
