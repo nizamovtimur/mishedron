@@ -18,7 +18,7 @@ div.app{
 
 div.app > h1{
     position: absolute;
-    font-size: 70px;
+    font-size: 50px;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -33,116 +33,70 @@ div.app > h2{
 }
 
 .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	display: inline-block;	
+	position: absolute;
+	width: 10%;
+	height: 7%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-height: 20px;
+	min-width: 60px;
+	min-font-size: 10px;
 	box-sizing: border-box;
-	padding: 0 15px;
-	margin: 0 15px 15px 0;
+	padding: 0.95% 1.25%;
+	margin: 0 10px 10px 0;
 	outline: none;
-	border: 1px solid #6c757d; 
+	border: none;
 	border-radius: 5px;
-	height: 38px;
-	line-height: 38px;
-	font-size: 14px;
+	flex-basis: content;
+	text-align: center;
+	vertical-align:middle;
+	display:table-cell;
 	font-weight: 600;
+	font-size: calc(10px + 1vw);
 	text-decoration: none;
-	color: #6c757d;
-	background-color: #fff;
+	color: #ffffff;
+	background-color: #2286aa;
 	cursor: pointer;
 	user-select: none;
 	appearance: none;
-	touch-action: manipulation;  
+	touch-action: manipulation;
 }
-.btn:focus {
-	box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
-}
-.btn:hover {
-	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
-}
-.btn:active {
-	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
-}
+
+.btn:hover {background-color: #196480}
+
 
 .btn2 {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	display: inline-block;	
+	position: absolute;
+	width: 10%;
+	height: 7%;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-height: 20px;
+	min-width: 100px;
+	min-font-size: 10px;
 	box-sizing: border-box;
-	padding: 0 15px;
-	margin: 0 15px 15px 0;
+	padding: 0.95% 1.25%;
+	margin: 0 10px 10px 0;
 	outline: none;
-	border: 1px solid #6c757d; 
+	border: none;
 	border-radius: 5px;
-	height: 38px;
-	line-height: 38px;
-	font-size: 14px;
+	flex-basis: content;
+	text-align: center;
+	vertical-align:middle;
+	display:table-cell;
 	font-weight: 600;
+	font-size: calc(8px + 1vw);
 	text-decoration: none;
-	color: #6c757d;
-	background-color: #fff;
+	color: #ffffff;
+	background-color: #2286aa;
 	cursor: pointer;
 	user-select: none;
 	appearance: none;
-	touch-action: manipulation;  
-}
-.btn2:focus {
-	box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
-}
-.btn2:hover {
-	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
-}
-.btn2:active {
-	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
+	touch-action: manipulation;
 }
 
-.btn-back {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-	display: inline-block;	
-	box-sizing: border-box;
-	padding: 0 15px;
-	margin: 0 15px 15px 0;
-	outline: none;
-	border: 1px solid #6c757d; 
-	border-radius: 5px;
-	height: 38px;
-	line-height: 38px;
-	font-size: 14px;
-	font-weight: 600;
-	text-decoration: none;
-	color: #6c757d;
-	background-color: #fff;
-	cursor: pointer;
-	user-select: none;
-	appearance: none;
-	touch-action: manipulation;  
-}
-.btn-back:focus {
-	box-shadow: 0 0 0 3px rgb(108 117 125 / 50%);
-}
-.btn-back:hover {
-	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
-}
-.btn-back:active {
-	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
-}
+.btn2:hover {background-color: #196480}
+
 
