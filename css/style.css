@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 	background: #add7f6;
-	font-family: Montserrat;
+	font-family: system-ui;
 }
 
 html, body{
@@ -43,7 +43,7 @@ div.app > h2{
 	min-height: 20px;
 	min-width: 70px;
 	min-font-size: 10px;
-	font-family: Montserrat;
+	font-family: system-ui;
 	box-sizing: border-box;
 	padding: 0.9% 1.3%;
 	margin: 0 10px 10px 0;
@@ -101,12 +101,3 @@ div.app > h2{
 }
 
 .btn2:hover {background-color: #196480}
-
-
-@font-face {
-	font-family: "Montserrat";
-	// адрес шрифта и тип
-	src: url("../fonts/Montserrat") format("TrueType");
-		font-style: normal;
-		font-weight: normal;
-}
