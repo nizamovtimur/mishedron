@@ -70,10 +70,9 @@ div.app > h2{
 
 .btn:hover {background-color: #196480}
 
-
 .btn2 {
 	position: absolute;
-	width: 12.5%;
+	width: 13%;
 	height: 7%;
 	top: 60%;
 	left: 50%;
@@ -83,10 +82,9 @@ div.app > h2{
 	min-font-size: 10px;
 	max-width: 700px;
 	box-sizing: border-box;
-	padding: 0.9% 1.25%;
+	padding: 0.5% 1.25%;
 	margin: 0 5px 5px 0;
 	outline: none;
-	border: none;
 	border-radius: 5px;
 	flex-basis: content;
 	text-align: center;
@@ -95,26 +93,32 @@ div.app > h2{
 	font-weight: 600;
 	font-size: calc(8px + 1vw);
 	text-decoration: none;
-	color: #000000;
-	/*background-color: #2286aa;*/
-	background-color: grey;
+	color: #ffffff;
+	border: solid;
+	border-color: grey;
 	cursor: pointer;
 	user-select: none;
 	appearance: none;
 	touch-action: manipulation;
 }
 
-.btn2:hover {background-color: #196480}
-
+.btn2:hover {background-color: grey}
 
 div .about_text {
 	position: relative;
-	background-color: #ffffff;
+	background: #bfdde7;
 	color: #000000;
 	margin: 120px auto;
 	padding: 20px 10px 20px;
 	width: 80%;
 }
 div .about_text p {
-	margin: 20px 0;
+	margin: 10px 0;
+}
+
+hr {
+	border: none;
+	background-color: #ffffff;
+	color: #ffffff;
+	height: 1.5px;
 }

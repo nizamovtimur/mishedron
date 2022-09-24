@@ -2,29 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui;
-}
-
-p{
-    padding: 10px;
-}
-
-#left {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 75%;
-    height: 100%;
-    background-color: #bfdde7;
-}
-#right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 25%;
-    background: url("../photo/siyanie.jpg");
-    background-size:cover;
+    font-family: system-ui
 }
 
 html, body{
