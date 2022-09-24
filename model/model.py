@@ -20,7 +20,7 @@ def get_base64(image):
     return "data:image/jpeg;base64," + img_str.decode()
 
 
-def letterbox(im, new_shape=(640, 640), color=(114, 114, 114), auto=True, scaleup=True, stride=32):
+def letterbox(im, new_shape=(1280, 1280), color=(114, 114, 114), auto=True, scaleup=True, stride=32):
     # Resize and pad image while meeting stride-multiple constraints
     shape = im.shape[:2]  # current shape [height, width]
     if isinstance(new_shape, int):
@@ -83,7 +83,6 @@ async def detection(input_source: str):
             ori_images = [img.copy()]
             predict_points = []
             for i, (batch_id,x0,y0,x1,y1,cls_id,score) in enumerate(outputs):
-                predict_points.append(((x0+x1)/2, (y0 + y1)/2))
                 image = ori_images[int(batch_id)]
                 box = np.array([x0,y0,x1,y1])
                 box -= np.array(dwdh*2)
@@ -95,6 +94,7 @@ async def detection(input_source: str):
                 color = colors[name]
                 name += ' '+str(score)
                 cv2.rectangle(image,box[:2],box[2:],color,2)
+                predict_points.append(((box[0]+box[2])/2, (box[1] + box[3])/2))
                 cv2.putText(image,name,(box[0], box[1] - 2),cv2.FONT_HERSHEY_SIMPLEX,0.75,[225, 255, 255],thickness=2)
             if len(predict_points) > 0:
                 save_path = os.path.join(save_folder_path, os.path.basename(file_name))
