@@ -4,6 +4,7 @@ document.body.onload = function (){
         if(!preloader.classList.contains("done"))
         {
             preloader.classList.add("done");
+            window.location.href = '../html/index.html';
         }
     }, 1000)
 }
