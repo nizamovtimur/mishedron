@@ -57,12 +57,15 @@ colors = {name:[random.randint(0, 255) for _ in range(3)] for i,name in enumerat
 app = FastAPI(title="AI Model")
 
 
-@app.post("/detection", response_description="Bear detection")
+@app.get("/detection", response_description="Bear detection")
 async def detection(input_source: str):
     try:
         input_source = input_source if os.path.isdir(input_source) else os.path.dirname(input_source)
-        predict_photos = []
+        predict_result = {}
         files = glob(os.path.join(input_source, '*.jpg')) + glob(os.path.join(input_source, '*.jpeg')) + glob(os.path.join(input_source, '*.png')) + glob(os.path.join(input_source, '*.JPG')) + glob(os.path.join(input_source, '*.JPEG')) + glob(os.path.join(input_source, '*.PNG'))
+        save_folder_path = os.path.join(input_source, 'result')
+        if not os.path.exists(save_folder_path):
+            os.makedirs(save_folder_path)
         for file_name in files:
             img = cv2.imread(file_name)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -71,19 +74,16 @@ async def detection(input_source: str):
             image = image.transpose((2, 0, 1))
             image = np.expand_dims(image, 0)
             image = np.ascontiguousarray(image)
-
             im = image.astype(np.float32)
             im /= 255
-
             outname = [i.name for i in session.get_outputs()]
-
             inname = [i.name for i in session.get_inputs()]
-
             inp = {inname[0]:im}
             outputs = session.run(outname, inp)[0]
             ori_images = [img.copy()]
-
+            predict_points = []
             for i, (batch_id,x0,y0,x1,y1,cls_id,score) in enumerate(outputs):
+                predict_points.append(((x0+x1)/2, (y0 + y1)/2))
                 image = ori_images[int(batch_id)]
                 box = np.array([x0,y0,x1,y1])
                 box -= np.array(dwdh*2)
@@ -96,12 +96,13 @@ async def detection(input_source: str):
                 name += ' '+str(score)
                 cv2.rectangle(image,box[:2],box[2:],color,2)
                 cv2.putText(image,name,(box[0], box[1] - 2),cv2.FONT_HERSHEY_SIMPLEX,0.75,[225, 255, 255],thickness=2)
-
-            predict_photos.append(get_base64(Image.fromarray(ori_images[0])))
-
-        result_of_classification = {"predict_photos": predict_photos}
-        if len(result_of_classification) == 0:
-            raise Exception("Фотографий не найдено!")
+            if len(predict_points) > 0:
+                save_path = os.path.join(save_folder_path, os.path.basename(file_name))
+                Image.fromarray(ori_images[0]).save(save_path)
+                predict_result[save_path] = predict_points
+            else:
+                predict_result[file_name] = []
+        result_of_classification = {"predict_result": predict_result}
     except Exception as e:
         raise HTTPException(404, str(e))
     return result_of_classification

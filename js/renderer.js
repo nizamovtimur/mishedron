@@ -5,8 +5,10 @@ function sendToPython() {
         pythonPath: python_path
     };
     PythonShell.run('model/uvicorn_start.py', options, function (err, results) {
-        if (err) throw err;
-        console.log('response: ', results);
+        if (err) {
+            alert(err);
+            throw err;
+        }
     });
 }
 
