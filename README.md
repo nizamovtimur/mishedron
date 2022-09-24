@@ -1,4 +1,4 @@
-# MISHEDRON
+# Детекция белых медведей
 *Скрин классного интерфейса*
 
 ## Тизер решения
@@ -15,7 +15,7 @@
 * Node.js, Electron
 
 ## Оценка классификации
-*метрика ROC-AUC*
+![F1_curve](F1_curve.png)
 
 ## Команда «Чай с Молочком»
 * [Тимур Низамов](https://github.com/nizamovtimur) – Team Leader
