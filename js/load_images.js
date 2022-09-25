@@ -13,9 +13,22 @@ $(function(){
     });
 });
 
+pictureBox.addEventListener("click", function () {
+    let image = document.createElement("img");
+    image.setAttribute("src", pictureBox.src);
+    image.setAttribute("id", "largeImage");
+    image.setAttribute("style", "position: absolute; height: 100%;width: 100%; top: 0px; left: 0px; z-index: 10");
+    document.body.appendChild(image);
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        document.body.removeChild(document.getElementById("largeImage"));
+    }
+});
+
 submit.addEventListener("click", function (){
     preloader.classList.add("undone");
-    // enable loader
     fetch('http://127.0.0.1:48884/detection?input_source='.concat(ctrl.files[0].path)).then((data)=>{
         if(!data.ok) alert(data.statusText);
         return data.json();
@@ -44,7 +57,6 @@ submit.addEventListener("click", function (){
             value_tabs.appendChild(custom_div);
         }
         document.getElementById("tabs").setAttribute("style", "background-color: white;")
-        // loader disabled
         preloader.classList.remove("undone");
         preloader.classList.add("done");
     }).catch(e=>{
