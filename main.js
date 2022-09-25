@@ -13,7 +13,8 @@ function createWindow() {
             preload: path.join(__dirname, './js/preload.js'),
             nodeIntegration: true,
             contextIsolation: false
-        }
+        },
+        title: "Детекция белых медведей"
     })
     win.removeMenu();
     win.loadFile('./html/preloader.html');

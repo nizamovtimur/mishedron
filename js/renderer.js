@@ -6,7 +6,6 @@ function sendToPython() {
     };
     PythonShell.run('model/uvicorn_start.py', options, function (err, results) {
         if (err) {
-            alert(err);
             throw err;
         }
     });
