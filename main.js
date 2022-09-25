@@ -4,8 +4,8 @@ const path = require('path');
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 1000,
+        height: 800,
         minHeight: 600,
         minWidth: 800,
         icon: "bear.png",
@@ -15,7 +15,7 @@ function createWindow() {
             contextIsolation: false
         }
     })
-    // win.removeMenu();
+    win.removeMenu();
     win.loadFile('./html/preloader.html');
     //win.webContents.openDevTools();
 }
