@@ -73,7 +73,6 @@ async def detection(input_source: str):
         fieldnames = ['name', 'x', 'y']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        print(files)
         for file_name in files:
             img = cv2.imread(file_name)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -102,7 +101,6 @@ async def detection(input_source: str):
                 score = round(float(score), 3)
                 name = names[cls_id]
                 color = colors[name]
-                name += ' ' + str(score)
                 cv2.rectangle(image, box[:2], box[2:], color, 2)
                 predict_points.append([int((box[0] + box[2]) / 2), int((box[1] + box[3]) / 2)])
                 cv2.putText(image, name, (box[0], box[1] - 2), cv2.FONT_HERSHEY_SIMPLEX, 0.75, [225, 255, 255],

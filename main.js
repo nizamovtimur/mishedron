@@ -8,6 +8,7 @@ function createWindow() {
         height: 600,
         minHeight: 600,
         minWidth: 800,
+        icon: "bear.png",
         webPreferences: {
             preload: path.join(__dirname, './js/preload.js'),
             nodeIntegration: true,
