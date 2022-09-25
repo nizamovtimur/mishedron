@@ -73,7 +73,6 @@ async def detection(input_source: str):
         fieldnames = ['name', 'x', 'y']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        print(files)
         for file_name in files:
             img = cv2.imread(file_name)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
