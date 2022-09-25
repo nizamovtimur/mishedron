@@ -8,17 +8,15 @@
 </head>
 <body style="background: #bfdde7">
     <a href = "index.html" title = "Назад"><img src="../photo/back1.png" width = 30 height = 30 style="margin-left: 1%; margin-top: 1%"></a>
-    <h1>Выберите папку с фотографиями</h1>
-    <input type="file" id="ctrl" webkitdirectory directory multiple/>
-    <br>
-        <div class = "app1">
+    <div class="container pb-3">
+        <h1>Выберите папку с фотографиями</h1>
+        <div style="text-align: center" class="p-3">
+            <input type="file" id="ctrl" webkitdirectory directory multiple/>
+        </div>
+        <div class="app1 p-3">
             <button id="submit" name="submit_button" class = "btn-load">Запуск анализа</button>
             <br>
         </div>
-    <br>
-    <div class = "app2">
-        <div id="result" style="padding-left: 15%">результат</div>
-    </div>
     <div class="row" id="listGroup">
         <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
@@ -28,16 +26,17 @@
 <!--                <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>-->
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-8 tabs">
             <div class="tab-content" id="nav-tabContent">
 <!--                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>-->
 <!--                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>-->
 <!--                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>-->
 <!--                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>-->
             </div>
+            <img class="pictureBox p-2" id="pictureBox" src="">
         </div>
     </div>
-    <img id="pictureBox" src="">
+    </div>
 <script src="../js/load_images.js"></script>
 </body>
 </html>

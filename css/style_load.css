@@ -59,3 +59,13 @@ div.app2{
 }
 
 .btn-load:hover {background-color: #196480}
+
+.pictureBox
+{
+    max-height: 100%;
+    max-width: 100%;
+}
+.tabs
+{
+    background-color: white;
+}
