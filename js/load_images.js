@@ -41,6 +41,7 @@ submit.addEventListener("click", function (){
             }
             value_tabs.appendChild(custom_div);
         }
+        document.getElementById("tabs").setAttribute("style", "background-color: white;")
         // loader disabled
     }).catch(e=>{
         console.log(e);
