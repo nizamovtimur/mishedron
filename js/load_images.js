@@ -4,6 +4,7 @@ let ctrl = document.getElementById('ctrl');
 let tabs = document.getElementById('list-tab');
 let value_tabs = document.getElementById('nav-tabContent');
 let pictureBox = document.getElementById('pictureBox');
+let preloader = document.getElementById("page-preloader");
 
 const $ = require('../jquery/jquery-3.6.1.js');
 $(function(){
@@ -13,6 +14,7 @@ $(function(){
 });
 
 submit.addEventListener("click", function (){
+    preloader.classList.add("undone");
     // enable loader
     fetch('http://127.0.0.1:48884/detection?input_source='.concat(ctrl.files[0].path)).then((data)=>{
         if(!data.ok) alert(data.statusText);
@@ -43,6 +45,8 @@ submit.addEventListener("click", function (){
         }
         document.getElementById("tabs").setAttribute("style", "background-color: white;")
         // loader disabled
+        preloader.classList.remove("undone");
+        preloader.classList.add("done");
     }).catch(e=>{
         console.log(e);
     });

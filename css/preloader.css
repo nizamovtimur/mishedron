@@ -7,8 +7,8 @@
   background: #bfdde7;
   z-index: 2;
   transition: 1s all;
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 .preloader .loader {
   width: 75px;
@@ -25,6 +25,10 @@
 .preloader.done {
   opacity: 0;
   visibility: hidden;
+}
+.preloader.undone {
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes spin {
