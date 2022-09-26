@@ -7,6 +7,7 @@ let pictureBox = document.getElementById('pictureBox');
 let preloader = document.getElementById("page-preloader");
 
 const $ = require('../jquery/jquery-3.6.1.js');
+const agent = require("global-agent/dist/classes/Agent");
 $(function(){
     $('#list-tab').on('click','a',function(){
         pictureBox.src = document.getElementById("id" + ($(this).index() + 1)).path;
@@ -18,6 +19,9 @@ pictureBox.addEventListener("click", function () {
     image.setAttribute("src", pictureBox.src);
     image.setAttribute("id", "largeImage");
     image.setAttribute("style", "position: absolute; height: 100%;width: 100%; top: 0px; left: 0px; z-index: 10");
+    image.addEventListener('click', function(event) {
+            document.body.removeChild(document.getElementById("largeImage"));
+    });
     document.body.appendChild(image);
 });
 
